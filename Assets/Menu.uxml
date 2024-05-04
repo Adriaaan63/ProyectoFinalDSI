@@ -1,0 +1,23 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements">
+    <ui:VisualElement name="Menu" style="background-image: url(&apos;project://database/Assets/Images/MenuInicial/FondoMenu%201.png?fileID=2800000&amp;guid=c9fbacd0b58f3104b89557ed08c0ef01&amp;type=3#FondoMenu 1&apos;); align-items: stretch; flex-direction: column; flex-wrap: nowrap; height: auto; flex-grow: 1;">
+        <ui:VisualElement name="Title" style="align-items: center; justify-content: center; flex-wrap: nowrap; flex-direction: row; height: auto; flex-grow: 2.5; flex-shrink: 1;">
+            <ui:VisualElement name="Espacio" style="flex-grow: 0.5;" />
+            <ui:VisualElement name="gameTitle" usage-hints="None" style="flex-direction: column; position: relative; align-items: center; background-image: url(&apos;project://database/Assets/Images/MenuInicial/GAME%20TITLE.png?fileID=2800000&amp;guid=068cc2427a1c56045a6ac14bb41c680c&amp;type=3#GAME TITLE&apos;); width: auto; -unity-background-scale-mode: stretch-to-fill; visibility: visible; display: flex; height: 75px; top: auto; flex-shrink: 1; justify-content: center; font-size: 72px; flex-grow: 1; -unity-background-image-tint-color: rgb(255, 255, 255); flex-wrap: nowrap;" />
+            <ui:VisualElement name="Espacio1" style="flex-grow: 1;" />
+        </ui:VisualElement>
+        <ui:VisualElement name="Buttons" style="height: auto; justify-content: space-around; flex-direction: row; flex-wrap: nowrap; align-items: stretch; flex-grow: 2;">
+            <ui:VisualElement name="Espacio" style="flex-grow: 2;" />
+            <ui:VisualElement name="Column1" style="justify-content: space-between; flex-grow: 1.5; align-items: stretch;">
+                <ui:VisualElement name="newGame" style="background-image: url(&apos;project://database/Assets/Images/MenuInicial/NEW%20GAME.png?fileID=2800000&amp;guid=6eb5a7418acb79e46bbf16b70a5250a8&amp;type=3#NEW GAME&apos;); height: 70px; align-items: stretch; width: auto; flex-grow: 0; flex-shrink: 1;" />
+                <ui:VisualElement name="options" style="background-image: url(&apos;project://database/Assets/Images/MenuInicial/OPTIONS.png?fileID=2800000&amp;guid=e65ec9d3c6e226b4aa1daea8f26141a5&amp;type=3#OPTIONS&apos;); height: 70px; width: auto;" />
+                <ui:VisualElement name="exit" style="background-image: url(&apos;project://database/Assets/Images/MenuInicial/EXIT.png?fileID=2800000&amp;guid=58bc782c3b309de43bb1f74ff25b548f&amp;type=3#EXIT&apos;); height: 70px; width: auto;" />
+            </ui:VisualElement>
+            <ui:VisualElement name="Espacio1" style="flex-grow: 3.5;">
+                <ui:VisualElement />
+                <ui:VisualElement />
+                <ui:VisualElement />
+            </ui:VisualElement>
+        </ui:VisualElement>
+        <ui:VisualElement name="Footer" style="flex-grow: 2;" />
+    </ui:VisualElement>
+</ui:UXML>
