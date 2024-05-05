@@ -1,0 +1,22 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="False">
+    <ui:VisualElement name="MenuCharacter" style="background-image: resource(&apos;Images/MenuCreate/NewGame&apos;); align-items: stretch; flex-direction: column; flex-wrap: nowrap; height: auto; flex-grow: 1;">
+        <ui:VisualElement name="Title" style="align-items: center; justify-content: flex-start; flex-wrap: nowrap; flex-direction: row; height: auto; flex-grow: 0.5; flex-shrink: 1;">
+            <ui:VisualElement name="Espacio1" style="flex-grow: 0.2;" />
+            <ui:VisualElement name="characterTitle" usage-hints="None" style="flex-direction: column; position: relative; align-items: flex-start; background-image: resource(&apos;Images/MenuCreate/CREATE YOUR CHARACTER&apos;); width: auto; -unity-background-scale-mode: stretch-to-fill; visibility: visible; display: flex; height: 30px; top: auto; flex-shrink: 1; justify-content: center; font-size: 72px; flex-grow: 1; -unity-background-image-tint-color: rgb(255, 255, 255); flex-wrap: nowrap;" />
+            <ui:VisualElement name="Espacio1" style="flex-grow: 1;" />
+        </ui:VisualElement>
+        <ui:VisualElement name="Buttons" style="height: auto; justify-content: space-around; flex-direction: row; flex-wrap: nowrap; align-items: stretch; flex-grow: 3;">
+            <ui:VisualElement name="CharacterOp" style="flex-grow: 1; flex-direction: row;">
+                <ui:VisualElement name="ColumIzq" style="flex-grow: 1;" />
+                <ui:VisualElement name="ColumDer" style="flex-grow: 1;" />
+            </ui:VisualElement>
+            <ui:VisualElement name="Character" style="justify-content: space-between; flex-grow: 1; align-items: stretch;" />
+            <ui:VisualElement name="Info" style="flex-grow: 1;">
+                <ui:VisualElement />
+                <ui:VisualElement />
+                <ui:VisualElement />
+            </ui:VisualElement>
+        </ui:VisualElement>
+        <ui:VisualElement name="Footer" style="flex-grow: 0.5;" />
+    </ui:VisualElement>
+</ui:UXML>
