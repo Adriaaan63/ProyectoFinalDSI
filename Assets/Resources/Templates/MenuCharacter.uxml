@@ -7,14 +7,40 @@
         </ui:VisualElement>
         <ui:VisualElement name="Buttons" style="height: auto; justify-content: space-around; flex-direction: row; flex-wrap: nowrap; align-items: stretch; flex-grow: 3;">
             <ui:VisualElement name="CharacterOp" style="flex-grow: 1; flex-direction: row;">
-                <ui:VisualElement name="ColumIzq" style="flex-grow: 1;" />
-                <ui:VisualElement name="ColumDer" style="flex-grow: 1;" />
+                <ui:VisualElement name="Espacio" style="flex-grow: 0.5;" />
+                <ui:VisualElement name="ColumIzq" style="flex-grow: 1;">
+                    <ui:VisualElement name="Espacio" style="flex-grow: 1;" />
+                    <ui:VisualElement name="P1" style="flex-grow: 1; background-image: resource(&apos;Images/MenuCreate/P (1)&apos;);" />
+                    <ui:VisualElement name="Espacio" style="flex-grow: 1;" />
+                    <ui:VisualElement name="P2" style="flex-grow: 1; background-image: resource(&apos;Images/MenuCreate/P (3)&apos;);" />
+                    <ui:VisualElement name="Espacio" style="flex-grow: 1;" />
+                </ui:VisualElement>
+                <ui:VisualElement name="ColumMid" style="flex-grow: 0.5;" />
+                <ui:VisualElement name="ColumDer" style="flex-grow: 1;">
+                    <ui:VisualElement name="Espacio" style="flex-grow: 1;" />
+                    <ui:VisualElement name="P3" style="flex-grow: 1; background-image: resource(&apos;Images/MenuCreate/P (2)&apos;);" />
+                    <ui:VisualElement name="Espacio" style="flex-grow: 1;" />
+                    <ui:VisualElement name="P4" style="flex-grow: 1; background-image: resource(&apos;Images/MenuCreate/P (4)&apos;);" />
+                    <ui:VisualElement name="Espacio" style="flex-grow: 1;" />
+                </ui:VisualElement>
+                <ui:VisualElement name="Espacio" style="flex-grow: 0.1;" />
             </ui:VisualElement>
             <ui:VisualElement name="Character" style="justify-content: space-between; flex-grow: 1; align-items: stretch;" />
-            <ui:VisualElement name="Info" style="flex-grow: 1;">
-                <ui:VisualElement />
-                <ui:VisualElement />
-                <ui:VisualElement />
+            <ui:VisualElement name="Info" style="flex-grow: 1; flex-direction: row;">
+                <ui:VisualElement name="Espacio" style="flex-grow: 0.4;" />
+                <ui:VisualElement name="ColumInfo" style="flex-grow: 1;">
+                    <ui:VisualElement name="Espacio" style="flex-grow: 1;" />
+                    <ui:VisualElement name="InfoName" style="flex-grow: 1;">
+                        <ui:VisualElement name="Espacio" style="flex-grow: 0.3;" />
+                        <ui:VisualElement name="Name" style="flex-grow: 0.4; background-image: resource(&apos;Images/MenuCreate/NAME&apos;); height: auto; width: 150px;" />
+                        <ui:TextField picking-mode="Ignore" value="filler text" name="NameText" text="ENTER YOUR NAME" style="align-items: auto; justify-content: flex-start; margin-left: 1px; margin-right: 1px; margin-top: 4px; margin-bottom: 1px;" />
+                    </ui:VisualElement>
+                    <ui:VisualElement style="flex-grow: 1;" />
+                    <ui:VisualElement style="flex-grow: 1;" />
+                    <ui:VisualElement style="flex-grow: 1;" />
+                    <ui:VisualElement style="flex-grow: 1;" />
+                </ui:VisualElement>
+                <ui:VisualElement name="Espacio" style="flex-grow: 0.25;" />
             </ui:VisualElement>
         </ui:VisualElement>
         <ui:VisualElement name="Footer" style="flex-grow: 0.5;" />
