@@ -1,6 +1,6 @@
 <ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="False">
     <ui:VisualElement name="MenuCharacter" style="background-image: resource(&apos;Images/MenuCreate/NewGame&apos;); align-items: stretch; flex-direction: column; flex-wrap: nowrap; height: auto; flex-grow: 1;">
-        <ui:VisualElement name="Title" style="align-items: center; justify-content: flex-start; flex-wrap: nowrap; flex-direction: row; height: auto; flex-grow: 0.5; flex-shrink: 1;">
+        <ui:VisualElement name="Title" style="align-items: center; justify-content: flex-start; flex-wrap: nowrap; flex-direction: row; height: auto; flex-grow: 0.4; flex-shrink: 1;">
             <ui:VisualElement name="Espacio1" style="flex-grow: 0.2;" />
             <ui:VisualElement name="characterTitle" usage-hints="None" style="flex-direction: column; position: relative; align-items: flex-start; background-image: resource(&apos;Images/MenuCreate/CREATE YOUR CHARACTER&apos;); width: auto; -unity-background-scale-mode: stretch-to-fill; visibility: visible; display: flex; height: 30px; top: auto; flex-shrink: 1; justify-content: center; font-size: 72px; flex-grow: 1; -unity-background-image-tint-color: rgb(255, 255, 255); flex-wrap: nowrap;" />
             <ui:VisualElement name="Espacio1" style="flex-grow: 1;" />
@@ -23,26 +23,58 @@
                     <ui:VisualElement name="P4" style="flex-grow: 1; background-image: resource(&apos;Images/MenuCreate/P (4)&apos;);" />
                     <ui:VisualElement name="Espacio" style="flex-grow: 1;" />
                 </ui:VisualElement>
-                <ui:VisualElement name="Espacio" style="flex-grow: 0.1;" />
+                <ui:VisualElement name="Espacio" style="flex-grow: 0.3;" />
             </ui:VisualElement>
-            <ui:VisualElement name="Character" style="justify-content: space-between; flex-grow: 1; align-items: stretch;" />
-            <ui:VisualElement name="Info" style="flex-grow: 1; flex-direction: row;">
-                <ui:VisualElement name="Espacio" style="flex-grow: 0.4;" />
+            <ui:VisualElement name="Character" style="justify-content: space-between; flex-grow: 0.9; align-items: stretch;">
+                <ui:VisualElement name="skin" style="flex-grow: 5; background-image: resource(&apos;Images/MenuCreate/character1&apos;);" />
+                <ui:VisualElement name="stats" style="flex-grow: 1.3;">
+                    <ui:VisualElement name="AttackStats" style="flex-grow: 1; flex-direction: row;">
+                        <ui:VisualElement name="VisualElement" style="flex-grow: 1; background-image: resource(&apos;Images/MenuCreate/Espada&apos;);" />
+                        <ui:VisualElement style="flex-grow: 1; background-image: resource(&apos;Images/MenuCreate/Espada&apos;);" />
+                        <ui:VisualElement style="flex-grow: 1; background-image: resource(&apos;Images/MenuCreate/Espada&apos;);" />
+                        <ui:VisualElement style="flex-grow: 1; background-image: resource(&apos;Images/MenuCreate/Espada&apos;);" />
+                        <ui:VisualElement style="flex-grow: 1; background-image: resource(&apos;Images/MenuCreate/Espada&apos;);" />
+                    </ui:VisualElement>
+                    <ui:VisualElement name="DefenseStats" style="flex-grow: 1; flex-direction: row;">
+                        <ui:VisualElement name="VisualElement" style="flex-grow: 1; background-image: resource(&apos;Images/MenuCreate/Escudo&apos;);" />
+                        <ui:VisualElement name="VisualElement" style="flex-grow: 1; background-image: resource(&apos;Images/MenuCreate/Escudo&apos;);" />
+                        <ui:VisualElement name="VisualElement" style="flex-grow: 1; background-image: resource(&apos;Images/MenuCreate/Escudo&apos;);" />
+                        <ui:VisualElement name="VisualElement" style="flex-grow: 1; background-image: resource(&apos;Images/MenuCreate/Escudo&apos;);" />
+                        <ui:VisualElement name="VisualElement" style="flex-grow: 1; background-image: resource(&apos;Images/MenuCreate/Escudo&apos;);" />
+                    </ui:VisualElement>
+                </ui:VisualElement>
+            </ui:VisualElement>
+            <ui:VisualElement name="Info" style="flex-grow: 0.77; flex-direction: row;">
+                <ui:VisualElement name="Espacio" style="flex-grow: 0.15;" />
                 <ui:VisualElement name="ColumInfo" style="flex-grow: 1;">
-                    <ui:VisualElement name="Espacio" style="flex-grow: 1;" />
+                    <ui:VisualElement name="Espacio" style="flex-grow: 1.7;" />
                     <ui:VisualElement name="InfoName" style="flex-grow: 1;">
                         <ui:VisualElement name="Espacio" style="flex-grow: 0.3;" />
                         <ui:VisualElement name="Name" style="flex-grow: 0.4; background-image: resource(&apos;Images/MenuCreate/NAME&apos;); height: auto; width: 150px;" />
                         <ui:TextField picking-mode="Ignore" value="filler text" name="NameText" text="ENTER YOUR NAME" style="align-items: auto; justify-content: flex-start; margin-left: 1px; margin-right: 1px; margin-top: 4px; margin-bottom: 1px;" />
                     </ui:VisualElement>
-                    <ui:VisualElement style="flex-grow: 1;" />
-                    <ui:VisualElement style="flex-grow: 1;" />
-                    <ui:VisualElement style="flex-grow: 1;" />
-                    <ui:VisualElement style="flex-grow: 1;" />
+                    <ui:VisualElement name="NumPoints" style="flex-grow: 1; flex-direction: row; align-items: flex-end;">
+                        <ui:VisualElement name="Espacio" style="flex-grow: 0.2;" />
+                        <ui:VisualElement name="Points" style="flex-grow: 1; background-image: resource(&apos;Images/MenuCreate/AVAILABLE POINTS_ 5&apos;); align-items: stretch; justify-content: space-around; height: 30px;" />
+                        <ui:VisualElement name="Espacio" style="flex-grow: 0.2;" />
+                    </ui:VisualElement>
+                    <ui:VisualElement name="AttackPoints" style="flex-grow: 1; align-items: center;">
+                        <ui:VisualElement name="Espacio" style="flex-grow: 0.5;" />
+                        <ui:VisualElement name="Attack" style="flex-grow: 0.3; background-image: resource(&apos;Images/MenuCreate/ATTACK&apos;); height: auto; width: 150px;" />
+                        <ui:TextField picking-mode="Ignore" value="filler text" name="AttackText" text="ATTACK POINTS" focusable="true" multiline="false" style="align-items: flex-end; justify-content: center; margin-left: auto; margin-right: auto; margin-top: auto; margin-bottom: auto; flex-grow: 0.2; -unity-text-align: upper-left; flex-shrink: 0; flex-direction: row;" />
+                    </ui:VisualElement>
+                    <ui:VisualElement name="DefensePoints" style="flex-grow: 1; align-items: center;">
+                        <ui:VisualElement name="Espacio" style="flex-grow: 0.5;" />
+                        <ui:VisualElement name="Defense" style="flex-grow: 0.3; background-image: resource(&apos;Images/MenuCreate/DEFENSE&apos;); height: auto; width: 150px;" />
+                        <ui:TextField picking-mode="Ignore" value="filler text" name="DefenseText" text="DEFENSE POINTS" focusable="true" multiline="false" style="align-items: flex-end; justify-content: center; margin-left: auto; margin-right: auto; margin-top: auto; margin-bottom: auto; flex-grow: 0.2; -unity-text-align: upper-left; flex-shrink: 0; flex-direction: row;" />
+                    </ui:VisualElement>
+                    <ui:VisualElement name="Create" style="flex-grow: 1.5; align-items: center; justify-content: center;">
+                        <ui:Button display-tooltip-when-elided="true" style="background-color: rgba(56, 56, 56, 0); align-items: auto; color: rgb(255, 255, 255); border-left-width: 0; border-right-width: 0; border-top-width: 0; border-bottom-width: 0; font-size: 32px; background-image: resource(&apos;Images/MenuCreate/CREATE&apos;); flex-grow: 0; flex-shrink: 1; width: 154px;" />
+                    </ui:VisualElement>
                 </ui:VisualElement>
                 <ui:VisualElement name="Espacio" style="flex-grow: 0.25;" />
             </ui:VisualElement>
         </ui:VisualElement>
-        <ui:VisualElement name="Footer" style="flex-grow: 0.5;" />
+        <ui:VisualElement name="Footer" style="flex-grow: 0.3;" />
     </ui:VisualElement>
 </ui:UXML>
