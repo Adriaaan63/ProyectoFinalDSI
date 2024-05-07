@@ -13,16 +13,16 @@
                 <ui:VisualElement name="options" style="background-image: url(&apos;project://database/Assets/Resources/Images/MenuOptions/GRAPHICS.png?fileID=2800000&amp;guid=49edd7d9a0d9e9146868536c1c6ae09c&amp;type=3#GRAPHICS&apos;); height: 70px; width: auto;" />
             </ui:VisualElement>
             <ui:VisualElement name="Espacio" style="flex-grow: 1.5;" />
-            <ui:VisualElement name="Column2" style="flex-grow: 3; justify-content: space-between;">
+            <ui:VisualElement name="Column2" style="flex-grow: 3; justify-content: space-between; -unity-background-scale-mode: scale-to-fit;">
                 <ui:Slider picking-mode="Ignore" value="42" high-value="100" name="VolumeSlider" />
-                <ui:DropdownField label="Choose an option" index="3" choices="Low, Medium, High" name="Graphics" />
+                <ui:DropdownField label="Choose an option" index="3" choices="Low, Medium, High" name="Graphics" style="font-size: 30px; background-color: rgb(213, 181, 156); color: rgb(255, 255, 255); -unity-background-scale-mode: stretch-to-fill;" />
             </ui:VisualElement>
             <ui:VisualElement name="Espacio" style="flex-grow: 1.5;" />
         </ui:VisualElement>
         <ui:VisualElement name="Footer" style="flex-grow: 2; flex-direction: row;">
             <ui:VisualElement name="Espacio1" style="flex-grow: 0.1;" />
             <ui:Button display-tooltip-when-elided="true" name="ReturnMenu" class="BackToMenu" />
-            <ui:VisualElement name="Espacio" index="3" choices="Low" style="flex-grow: 1; font-size: 80px; color: rgb(255, 255, 255);" />
+            <ui:VisualElement name="Espacio" index="3" choices="Low" style="flex-grow: 1; font-size: 80px; color: rgb(255, 255, 255); -unity-background-scale-mode: stretch-to-fill;" />
         </ui:VisualElement>
     </ui:VisualElement>
 </ui:UXML>
