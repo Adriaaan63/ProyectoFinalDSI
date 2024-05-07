@@ -8,15 +8,18 @@ public class Final : MonoBehaviour
 {
 
     VisualElement botonOptions;
+    VisualElement botonNewGame;
     private void OnEnable()
     {
         UIDocument uIDocument = GetComponent<UIDocument>();
         VisualElement rootve = uIDocument.rootVisualElement;
 
         botonOptions = rootve.Q<Button>("options");
+        botonNewGame = rootve.Q<Button>("newGame");
         TextoEnriquecido(rootve);
 
         botonOptions.RegisterCallback<ClickEvent>(CambiarAOptions);
+        botonNewGame.RegisterCallback<ClickEvent>(CambiarAGame);
     }
     private void CreateTemplates(VisualElement rootve)
     {
@@ -40,5 +43,9 @@ public class Final : MonoBehaviour
     private void CambiarAOptions(ClickEvent e)
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+    }
+    private void CambiarAGame(ClickEvent e)
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 2);
     }
 }
