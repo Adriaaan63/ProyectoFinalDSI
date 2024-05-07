@@ -3,7 +3,7 @@
     <ui:VisualElement name="MenuOptions" style="background-image: url(&apos;project://database/Assets/Resources/Images/MenuOptions/OptionsFondo%201.png?fileID=2800000&amp;guid=b255693663934a546861033f4eea60c6&amp;type=3#OptionsFondo 1&apos;); align-items: stretch; flex-direction: column; flex-wrap: nowrap; height: auto; flex-grow: 1;">
         <ui:VisualElement name="Title" style="align-items: center; justify-content: center; flex-wrap: nowrap; flex-direction: row; height: auto; flex-grow: 2.5; flex-shrink: 1;">
             <ui:VisualElement name="Espacio" style="flex-grow: 1;" />
-            <ui:VisualElement name="gameTitle" usage-hints="None" style="flex-direction: column; position: relative; align-items: center; background-image: url(&apos;project://database/Assets/Resources/Images/MenuOptions/OPTIONS.png?fileID=2800000&amp;guid=decbde1655898b44c80a0cd2df78cd65&amp;type=3#OPTIONS&apos;); width: auto; -unity-background-scale-mode: stretch-to-fill; visibility: visible; display: flex; height: 75px; top: auto; flex-shrink: 1; justify-content: center; font-size: 72px; flex-grow: 1; -unity-background-image-tint-color: rgb(255, 255, 255); flex-wrap: nowrap;" />
+            <ui:Label display-tooltip-when-elided="true" name="OptinosText" style="font-size: 100px; color: rgb(255, 255, 255);" />
             <ui:VisualElement name="Espacio1" style="flex-grow: 1;" />
         </ui:VisualElement>
         <ui:VisualElement name="Buttons" style="height: auto; justify-content: space-around; flex-direction: row; flex-wrap: nowrap; align-items: stretch; flex-grow: 2;">
@@ -14,15 +14,15 @@
             </ui:VisualElement>
             <ui:VisualElement name="Espacio" style="flex-grow: 1.5;" />
             <ui:VisualElement name="Column2" style="flex-grow: 3; justify-content: space-between;">
-                <ui:Slider picking-mode="Ignore" value="42" high-value="100" />
-                <ui:Foldout text="CHOOSE AN OPTION" style="background-color: rgb(178, 139, 110); color: rgb(255, 255, 255); -unity-font: none; align-items: center; justify-content: flex-end; font-size: 30px;" />
+                <ui:Slider picking-mode="Ignore" value="42" high-value="100" name="VolumeSlider" />
+                <ui:DropdownField label="Choose an option" index="3" choices="Low, Medium, High" name="Graphics" />
             </ui:VisualElement>
             <ui:VisualElement name="Espacio" style="flex-grow: 1.5;" />
         </ui:VisualElement>
         <ui:VisualElement name="Footer" style="flex-grow: 2; flex-direction: row;">
             <ui:VisualElement name="Espacio1" style="flex-grow: 0.1;" />
             <ui:Button display-tooltip-when-elided="true" name="ReturnMenu" class="BackToMenu" />
-            <ui:VisualElement name="Espacio" style="flex-grow: 1;" />
+            <ui:VisualElement name="Espacio" index="3" choices="Low" style="flex-grow: 1; font-size: 80px; color: rgb(255, 255, 255);" />
         </ui:VisualElement>
     </ui:VisualElement>
 </ui:UXML>

@@ -13,8 +13,10 @@ public class MenuOptions : MonoBehaviour
         UIDocument uIDocument = GetComponent<UIDocument>();
         VisualElement rootve = uIDocument.rootVisualElement;
 
-        returnToMenu = rootve.Q<Button>("ReturnMenu");
+        TextoEnriquecido(rootve);
+        createSlider(rootve);
 
+        returnToMenu = rootve.Q<Button>("ReturnMenu");
         returnToMenu.RegisterCallback<ClickEvent>(ReturnToMenu);
     }
 
@@ -22,4 +24,24 @@ public class MenuOptions : MonoBehaviour
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1);
     }
+
+    private void TextoEnriquecido(VisualElement rootve)
+    {
+        Label texto = rootve.Q<Label>("OptinosText");
+        texto.text = @"<b><gradient=""Options_colors"">OPTIONS <smallcaps> </gradient></b>";
+    }
+
+    private void createSlider(VisualElement rootve)
+    {
+        VisualElement slider = rootve.Q<Slider>("VolumeSlider");
+        slider.style.backgroundColor = new Color(0.871f, 0.765f, 0.553f);  
+
+        VisualElement mdrager = rootve.Q<VisualElement>("unity-dragger");
+        mdrager.style.backgroundColor = new Color(1.0f, 0.92f, 0.016f); 
+
+        VisualElement mtracker = rootve.Q<VisualElement>("unity-tracker");
+        mtracker.style.backgroundColor = new Color(0.0f, 0.0f, 0.0f); 
+    }
+
+
 }
