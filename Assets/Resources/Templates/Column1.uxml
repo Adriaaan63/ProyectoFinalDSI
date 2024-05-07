@@ -1,0 +1,8 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="False">
+    <Style src="project://database/Assets/MenuButtonStyle.uss?fileID=7433441132597879392&amp;guid=adf72503ea58d6e4590c1db6c0fc03bd&amp;type=3#MenuButtonStyle" />
+    <ui:VisualElement name="Column1" style="justify-content: space-between; flex-grow: 1.5; align-items: stretch;">
+        <ui:Button display-tooltip-when-elided="true" name="newGame" class="botonMenu" style="flex-grow: 0.2;" />
+        <ui:Button display-tooltip-when-elided="true" name="options" class="botonMenu" style="background-image: resource(&apos;Images/MenuInicial/OPTIONS&apos;); flex-grow: 0.2; border-top-left-radius: 20px; border-bottom-left-radius: 20px; border-top-right-radius: 20px; border-bottom-right-radius: 20px; border-left-width: 0; border-right-width: 0; border-top-width: 0; border-bottom-width: 0;" />
+        <ui:Button display-tooltip-when-elided="true" name="exit" class="botonMenu" style="background-image: resource(&apos;Images/MenuInicial/EXIT&apos;); flex-grow: 0.2; background-color: rgba(27, 40, 55, 0.72); border-top-left-radius: 20px; border-bottom-left-radius: 20px; border-top-right-radius: 20px; border-bottom-right-radius: 20px; border-left-width: 0; border-right-width: 0; border-top-width: 0; border-bottom-width: 0;" />
+    </ui:VisualElement>
+</ui:UXML>

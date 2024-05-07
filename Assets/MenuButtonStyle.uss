@@ -1,0 +1,32 @@
+.botonMenu {
+    background-image: resource('Images/MenuInicial/NEW GAME');
+    flex-grow: 0.2;
+    background-color: rgba(27, 40, 55, 0.72);
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    border-left-width: 0;
+    border-right-width: 0;
+    border-top-width: 0;
+    border-bottom-width: 0;
+    justify-content: space-between;
+    align-items: auto;
+}
+
+.botonMenu:hover {
+    background-image: resource('Images/MenuInicial/NEW GAME');
+    flex-grow: 0.2;
+    background-color: rgba(27, 40, 55, 0.72);
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    border-left-width: 0;
+    border-right-width: 0;
+    border-top-width: 0;
+    border-bottom-width: 0;
+    justify-content: space-between;
+    align-items: auto;
+    scale: 1.1 1;
+}
