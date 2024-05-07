@@ -1,4 +1,5 @@
 <ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="False">
+    <Style src="project://database/Assets/MenuCharacterStyle.uss?fileID=7433441132597879392&amp;guid=dd66357ee00ac574b86b932dde510c25&amp;type=3#MenuCharacterStyle" />
     <ui:VisualElement name="MenuCharacter" style="background-image: resource(&apos;Images/MenuCreate/NewGame&apos;); align-items: stretch; flex-direction: column; flex-wrap: nowrap; height: auto; flex-grow: 1;">
         <ui:VisualElement name="Title" style="align-items: center; justify-content: flex-start; flex-wrap: nowrap; flex-direction: row; height: auto; flex-grow: 0.4; flex-shrink: 1;">
             <ui:VisualElement name="Espacio1" style="flex-grow: 0.2;" />
@@ -6,45 +7,37 @@
             <ui:VisualElement name="Espacio1" style="flex-grow: 1;" />
         </ui:VisualElement>
         <ui:VisualElement name="Buttons" style="height: auto; justify-content: space-around; flex-direction: row; flex-wrap: nowrap; align-items: stretch; flex-grow: 3;">
-            <ui:VisualElement name="CharacterOp" style="flex-grow: 1; flex-direction: row;">
+            <ui:VisualElement name="CharacterOp" style="flex-grow: 1.5; flex-direction: row;">
                 <ui:VisualElement name="Espacio" style="flex-grow: 0.5;" />
                 <ui:VisualElement name="ColumIzq" style="flex-grow: 1;">
                     <ui:VisualElement name="Espacio" style="flex-grow: 1;" />
-                    <ui:VisualElement name="P1" style="flex-grow: 1; background-image: resource(&apos;Images/MenuCreate/P (1)&apos;);" />
+                    <ui:VisualElement name="P1" class="P1Style" />
                     <ui:VisualElement name="Espacio" style="flex-grow: 1;" />
-                    <ui:VisualElement name="P2" style="flex-grow: 1; background-image: resource(&apos;Images/MenuCreate/P (3)&apos;);" />
+                    <ui:VisualElement name="P3" class="P3Style" />
                     <ui:VisualElement name="Espacio" style="flex-grow: 1;" />
                 </ui:VisualElement>
                 <ui:VisualElement name="ColumMid" style="flex-grow: 0.5;" />
                 <ui:VisualElement name="ColumDer" style="flex-grow: 1;">
                     <ui:VisualElement name="Espacio" style="flex-grow: 1;" />
-                    <ui:VisualElement name="P3" style="flex-grow: 1; background-image: resource(&apos;Images/MenuCreate/P (2)&apos;);" />
+                    <ui:VisualElement name="P2" class="P2Style" />
                     <ui:VisualElement name="Espacio" style="flex-grow: 1;" />
-                    <ui:VisualElement name="P4" style="flex-grow: 1; background-image: resource(&apos;Images/MenuCreate/P (4)&apos;);" />
+                    <ui:VisualElement name="P4" class="P4Style" />
                     <ui:VisualElement name="Espacio" style="flex-grow: 1;" />
                 </ui:VisualElement>
-                <ui:VisualElement name="Espacio" style="flex-grow: 0.3;" />
+                <ui:VisualElement name="Espacio" style="flex-grow: 0.4;" />
             </ui:VisualElement>
-            <ui:VisualElement name="Character" style="justify-content: space-between; flex-grow: 0.9; align-items: stretch;">
-                <ui:VisualElement name="skin" style="flex-grow: 5; background-image: resource(&apos;Images/MenuCreate/character1&apos;);" />
-                <ui:VisualElement name="stats" style="flex-grow: 1.3;">
-                    <ui:VisualElement name="AttackStats" style="flex-grow: 1; flex-direction: row;">
-                        <ui:VisualElement name="VisualElement" style="flex-grow: 1; background-image: resource(&apos;Images/MenuCreate/Espada&apos;);" />
-                        <ui:VisualElement style="flex-grow: 1; background-image: resource(&apos;Images/MenuCreate/Espada&apos;);" />
-                        <ui:VisualElement style="flex-grow: 1; background-image: resource(&apos;Images/MenuCreate/Espada&apos;);" />
-                        <ui:VisualElement style="flex-grow: 1; background-image: resource(&apos;Images/MenuCreate/Espada&apos;);" />
-                        <ui:VisualElement style="flex-grow: 1; background-image: resource(&apos;Images/MenuCreate/Espada&apos;);" />
+            <ui:VisualElement name="Character" style="justify-content: space-between; flex-grow: 0.3; align-items: stretch;">
+                <ui:VisualElement name="skin" style="flex-grow: 10; background-image: resource(&apos;Images/MenuCreate/character1&apos;);" />
+                <ui:VisualElement name="stats" style="flex-grow: 0;">
+                    <ui:VisualElement name="StatsDefense" style="flex-grow: 0.3;">
+                        <Stats espada="0" style="flex-direction: row; align-items: stretch; justify-content: center;" />
                     </ui:VisualElement>
-                    <ui:VisualElement name="DefenseStats" style="flex-grow: 1; flex-direction: row;">
-                        <ui:VisualElement name="VisualElement" style="flex-grow: 1; background-image: resource(&apos;Images/MenuCreate/Escudo&apos;);" />
-                        <ui:VisualElement name="VisualElement" style="flex-grow: 1; background-image: resource(&apos;Images/MenuCreate/Escudo&apos;);" />
-                        <ui:VisualElement name="VisualElement" style="flex-grow: 1; background-image: resource(&apos;Images/MenuCreate/Escudo&apos;);" />
-                        <ui:VisualElement name="VisualElement" style="flex-grow: 1; background-image: resource(&apos;Images/MenuCreate/Escudo&apos;);" />
-                        <ui:VisualElement name="VisualElement" style="flex-grow: 1; background-image: resource(&apos;Images/MenuCreate/Escudo&apos;);" />
+                    <ui:VisualElement name="StatsDefense" style="flex-grow: 0.3; align-items: center;">
+                        <Stats1 style="flex-direction: row; justify-content: center;" />
                     </ui:VisualElement>
                 </ui:VisualElement>
             </ui:VisualElement>
-            <ui:VisualElement name="Info" style="flex-grow: 0.77; flex-direction: row;">
+            <ui:VisualElement name="Info" style="flex-grow: 1.2; flex-direction: row;">
                 <ui:VisualElement name="Espacio" style="flex-grow: 0.15;" />
                 <ui:VisualElement name="ColumInfo" style="flex-grow: 1;">
                     <ui:VisualElement name="Espacio" style="flex-grow: 1.7;" />
