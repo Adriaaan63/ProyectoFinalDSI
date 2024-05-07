@@ -8,10 +8,13 @@ using UnityEngine.UIElements;
 public class MenuOptions : MonoBehaviour
 {
     VisualElement returnToMenu;
+    private List<AudioSource> audioSources; 
+
     private void OnEnable()
     {
         UIDocument uIDocument = GetComponent<UIDocument>();
         VisualElement rootve = uIDocument.rootVisualElement;
+        audioSources = new List<AudioSource>(FindObjectsOfType<AudioSource>());
 
         TextoEnriquecido(rootve);
         createSlider(rootve);
@@ -33,15 +36,21 @@ public class MenuOptions : MonoBehaviour
 
     private void createSlider(VisualElement rootve)
     {
-        VisualElement slider = rootve.Q<Slider>("VolumeSlider");
+        Slider slider = rootve.Q<Slider>("VolumeSlider");
         slider.style.backgroundColor = new Color(0.871f, 0.765f, 0.553f);  
 
         VisualElement mdrager = rootve.Q<VisualElement>("unity-dragger");
         mdrager.style.backgroundColor = new Color(1.0f, 0.92f, 0.016f); 
 
         VisualElement mtracker = rootve.Q<VisualElement>("unity-tracker");
-        mtracker.style.backgroundColor = new Color(0.0f, 0.0f, 0.0f); 
+        mtracker.style.backgroundColor = new Color(0.0f, 0.0f, 0.0f);
+
+        slider.RegisterValueChangedCallback((evt) => {
+            float mappedValue = evt.newValue / 100f;
+            foreach (var source in audioSources)
+            {
+                source.volume = mappedValue;
+            }
+        });
     }
-
-
 }
