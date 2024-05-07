@@ -3,12 +3,16 @@
     <ui:VisualElement name="Menu" style="background-image: url(&apos;project://database/Assets/Resources/Images/MenuInicial/FondoMenu%201.png?fileID=2800000&amp;guid=c9fbacd0b58f3104b89557ed08c0ef01&amp;type=3#FondoMenu 1&apos;); align-items: stretch; flex-direction: column; flex-wrap: nowrap; height: auto; flex-grow: 1;">
         <ui:VisualElement name="Header" style="align-items: center; justify-content: center; flex-wrap: nowrap; flex-direction: row; height: auto; flex-grow: 2.5; flex-shrink: 1;">
             <ui:VisualElement name="Espacio" style="flex-grow: 0.5;" />
-            <ui:Label display-tooltip-when-elided="true" name="Title" tabindex="-1" style="font-size: 150px; -unity-font-style: bold; color: rgb(255, 255, 255);" />
+            <ui:Label display-tooltip-when-elided="true" name="Title" tabindex="-1" style="font-size: 150px; -unity-font-style: bold; color: rgb(255, 255, 255); -unity-font: resource(&apos;&apos;);" />
             <ui:VisualElement name="Espacio1" style="flex-grow: 1;" />
         </ui:VisualElement>
         <ui:VisualElement name="Buttons" style="height: auto; justify-content: space-around; flex-direction: row; flex-wrap: nowrap; align-items: stretch; flex-grow: 2;">
             <ui:VisualElement name="Espacio" style="flex-grow: 2;" />
-            <ui:VisualElement name="ButtonsMenu" style="flex-grow: 2;" />
+            <ui:VisualElement name="Column1" style="justify-content: space-between; flex-grow: 1.5; align-items: stretch;">
+                <ui:Button display-tooltip-when-elided="true" name="newGame" class="botonMenu" style="flex-grow: 0.2;" />
+                <ui:Button display-tooltip-when-elided="true" name="options" class="botonMenu" style="background-image: resource(&apos;Images/MenuInicial/OPTIONS&apos;); flex-grow: 0.2; border-top-left-radius: 20px; border-bottom-left-radius: 20px; border-top-right-radius: 20px; border-bottom-right-radius: 20px; border-left-width: 0; border-right-width: 0; border-top-width: 0; border-bottom-width: 0;" />
+                <ui:Button display-tooltip-when-elided="true" name="exit" class="botonMenu" style="background-image: resource(&apos;Images/MenuInicial/EXIT&apos;); flex-grow: 0.2; background-color: rgba(27, 40, 55, 0.72); border-top-left-radius: 20px; border-bottom-left-radius: 20px; border-top-right-radius: 20px; border-bottom-right-radius: 20px; border-left-width: 0; border-right-width: 0; border-top-width: 0; border-bottom-width: 0;" />
+            </ui:VisualElement>
             <ui:VisualElement name="Espacio1" style="flex-grow: 3.5;" />
         </ui:VisualElement>
         <ui:VisualElement name="Footer" style="flex-grow: 2; font-size: 100px;" />

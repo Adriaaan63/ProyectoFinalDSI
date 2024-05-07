@@ -1,0 +1,30 @@
+.BackToMenu {
+    background-image: resource('Images/MenuOptions/Group 1');
+    background-color: rgba(88, 88, 88, 0);
+    flex-grow: 0.5;
+    -unity-background-scale-mode: scale-to-fit;
+    border-left-width: 0;
+    border-right-width: 0;
+    border-top-width: 0;
+    border-bottom-width: 0;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+.BackToMenu:hover {
+    background-image: resource('Images/MenuOptions/Group 1');
+    background-color: rgba(88, 88, 88, 0);
+    flex-grow: 0.5;
+    -unity-background-scale-mode: scale-to-fit;
+    border-left-width: 0;
+    border-right-width: 0;
+    border-top-width: 0;
+    border-bottom-width: 0;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    scale: 1.1 1.1;
+}
