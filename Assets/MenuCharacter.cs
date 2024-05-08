@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor;
 using UnityEngine;
 using UnityEngine.UIElements;
 
@@ -13,7 +14,11 @@ public class MenuCharacter : MonoBehaviour
     Label nameLabel;
 
     VisualElement imagePrin;
+    VisualElement auxSkin;
     VisualElement skin1, skin2, skin3, skin4;
+    string rootSkin = "Images/MenuCreate/P";
+    int auxNumSkin = 0;
+    bool pulsado = false;
     private void OnEnable()
     {
         VisualElement root = GetComponent<UIDocument>().rootVisualElement;
@@ -69,24 +74,47 @@ public class MenuCharacter : MonoBehaviour
     }
     void ChangeImage(ClickEvent e)
     {
-            VisualElement skins = e.target as VisualElement;
+        VisualElement skins = e.target as VisualElement;
         Sprite per = null;
+        if (pulsado)
+        {
+            Sprite normalImage = Resources.Load<Sprite>(rootSkin + "(" + auxNumSkin.ToString() + ")");
+            auxSkin.style.backgroundImage = new StyleBackground(normalImage);
+        }
         if (skins == skin1)
         {
             per = Resources.Load<Sprite>("Images/MenuCreate/character1");
+            Sprite hover = Resources.Load<Sprite>("Images/MenuCreate/P(1)Hover");
+
+            skins.style.backgroundImage = new StyleBackground(hover);
+            auxNumSkin = 1;
         }
         else if(skins == skin2)
         {
             per = Resources.Load<Sprite>("Images/MenuCreate/character2");
+            Sprite hover = Resources.Load<Sprite>("Images/MenuCreate/P(2)Hover");
+
+            skins.style.backgroundImage = new StyleBackground(hover);
+            auxNumSkin = 2;
         }
         else if(skins == skin3)
         {
             per = Resources.Load<Sprite>("Images/MenuCreate/character3");
+            Sprite hover = Resources.Load<Sprite>("Images/MenuCreate/P(3)Hover");
+
+            skins.style.backgroundImage = new StyleBackground(hover);
+            auxNumSkin = 3;
         }
         else if (skins == skin4)
         {
             per = Resources.Load<Sprite>("Images/MenuCreate/character4");
+            Sprite hover = Resources.Load<Sprite>("Images/MenuCreate/P(4)Hover");
+
+            skins.style.backgroundImage = new StyleBackground(hover);
+            auxNumSkin = 4;
         }
-            imagePrin.style.backgroundImage = new StyleBackground(per);
+        auxSkin = skins;
+        pulsado = true;
+        imagePrin.style.backgroundImage = new StyleBackground(per);
     }
 }

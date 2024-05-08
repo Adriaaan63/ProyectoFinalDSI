@@ -1,45 +1,5 @@
-.P1Style {
-    flex-grow: 1;
-    background-image: resource('Images/MenuCreate/P (1)');
-}
-
-.P1Style:hover {
-    flex-grow: 1;
-    background-image: resource('Images/MenuCreate/PHover (1)');
-}
-
-.P2Style {
-    flex-grow: 1;
-    background-image: resource('Images/MenuCreate/P (2)');
-}
-
-.P2Style:hover {
-    flex-grow: 1;
-    background-image: resource('Images/MenuCreate/PHover (2)');
-}
-
-.P3Style {
-    flex-grow: 1;
-    background-image: resource('Images/MenuCreate/P (3)');
-}
-
-.P3Style:hover {
-    flex-grow: 1;
-    background-image: resource('Images/MenuCreate/PHover (3)');
-}
-
-.P4Style {
-    flex-grow: 1;
-    background-image: resource('Images/MenuCreate/P (4)');
-}
-
-.P4Style:hover {
-    flex-grow: 1;
-    background-image: resource('Images/MenuCreate/PHover (4)');
-}
-
 .escudos {
-    background-color: rgba(56, 56, 56, 255);
+    background-color: rgb(56, 56, 56);
     border-left-width: 5px;
     border-right-width: 5px;
     border-top-width: 5px;
@@ -48,8 +8,48 @@
     border-bottom-left-radius: 50px;
     border-top-right-radius: 50px;
     border-bottom-right-radius: 50px;
-    border-left-color: rgba(255, 255, 255, 255);
-    border-right-color: rgba(255, 255, 255, 255);
-    border-top-color: rgba(255, 255, 255, 255);
-    border-bottom-color: rgba(255, 255, 255, 255);
+    border-left-color: rgb(255, 255, 255);
+    border-right-color: rgb(255, 255, 255);
+    border-top-color: rgb(255, 255, 255);
+    border-bottom-color: rgb(255, 255, 255);
+}
+
+.P1Style {
+    background-image: resource('Images/MenuCreate/P(1)');
+    flex-grow: 1;
+}
+
+.P1Style:hover {
+    background-image: resource('Images/MenuCreate/P(1)Hover');
+    flex-grow: 1;
+}
+
+.P2Style {
+    background-image: resource('Images/MenuCreate/P(2)');
+    flex-grow: 1;
+}
+
+.P3Style {
+    background-image: resource('Images/MenuCreate/P(3)');
+    flex-grow: 1;
+}
+
+.P4Style {
+    background-image: resource('Images/MenuCreate/P(4)');
+    flex-grow: 1;
+}
+
+.P2Style:hover {
+    background-image: resource('Images/MenuCreate/P(2)Hover');
+    flex-grow: 1;
+}
+
+.P3Style:hover {
+    background-image: resource('Images/MenuCreate/P(3)Hover');
+    flex-grow: 1;
+}
+
+.P4Style:hover {
+    background-image: resource('Images/MenuCreate/P(4)Hover');
+    flex-grow: 1;
 }
