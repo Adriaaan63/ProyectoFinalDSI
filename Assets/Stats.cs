@@ -5,6 +5,7 @@ using UnityEngine.UIElements;
 
 public class Stats : VisualElement
 {
+    
     public new class UxmlFactory : UxmlFactory<Stats, UxmlTraits> { };
 
     List<VisualElement> list = new List<VisualElement>();
@@ -49,8 +50,9 @@ public class Stats : VisualElement
         hierarchy.Add(espada3);
         hierarchy.Add(espada4);
         hierarchy.Add(espada5);
+        
     }
-    int nivelEspada;
+    int nivelEspada = 0;
     public int NivelEspada
     {
         get => nivelEspada;

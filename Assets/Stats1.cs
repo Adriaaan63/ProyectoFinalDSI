@@ -50,7 +50,7 @@ public class Stats1 : VisualElement
         hierarchy.Add(Escudo4);
         hierarchy.Add(Escudo5);
     }
-    int nivelEscudo;
+    int nivelEscudo=0;
     public int NivelEscudo
     {
         get => nivelEscudo;
