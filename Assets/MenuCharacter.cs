@@ -5,6 +5,7 @@ using System.Linq;
 using UnityEditor;
 using UnityEngine;
 using UnityEngine.UIElements;
+using UnityEngine.SceneManagement;
 
 public class MenuCharacter : MonoBehaviour
 {
@@ -29,6 +30,8 @@ public class MenuCharacter : MonoBehaviour
     bool pulsado = false;
     int pointsAvalible = 0;
 
+    VisualElement returnToMenu;
+
     Individuo individuoPrueba;
     private void OnEnable()
     {
@@ -46,6 +49,9 @@ public class MenuCharacter : MonoBehaviour
         skinPos = root.Q<VisualElement>("PosTarget");
 
         create = root.Q<Button>("ButtonCreate");
+
+        returnToMenu = root.Q<Button>("ReturnMenu");
+        returnToMenu.RegisterCallback<ClickEvent>(ReturnToMenu);
 
         attackStats.RegisterCallback<ChangeEvent<string>>(ChangeAttack);
         defenseStats.RegisterCallback<ChangeEvent<string>>(ChangeDefense);
@@ -174,5 +180,10 @@ public class MenuCharacter : MonoBehaviour
         //    Debug.Log(i.Nombre + " " + i.Apellido);
         //});
 
+    }
+
+    private void ReturnToMenu(ClickEvent e)
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 2);
     }
 }

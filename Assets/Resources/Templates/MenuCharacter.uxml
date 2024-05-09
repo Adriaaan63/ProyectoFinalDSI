@@ -69,6 +69,8 @@
                 <ui:VisualElement name="Espacio" style="flex-grow: 0.25;" />
             </ui:VisualElement>
         </ui:VisualElement>
-        <ui:VisualElement name="Footer" style="flex-grow: 0.2;" />
+        <ui:VisualElement name="Footer" style="flex-grow: 0.2; align-items: stretch; justify-content: flex-start;">
+            <ui:Button display-tooltip-when-elided="true" name="ReturnMenu" class="BackToMenuButton" />
+        </ui:VisualElement>
     </ui:VisualElement>
 </ui:UXML>

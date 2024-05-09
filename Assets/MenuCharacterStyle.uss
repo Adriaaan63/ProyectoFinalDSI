@@ -53,3 +53,24 @@
     background-image: resource('Images/MenuCreate/P(4)Hover');
     flex-grow: 1;
 }
+
+.BackToMenuButton {
+    background-image: resource('Images/MenuCreate/BackTomenu');
+    -unity-background-scale-mode: scale-to-fit;
+    background-color: rgba(88, 88, 88, 0);
+    border-left-color: rgba(255, 255, 255, 0);
+    border-right-color: rgba(255, 255, 255, 0);
+    border-top-color: rgba(255, 255, 255, 0);
+    border-bottom-color: rgba(255, 255, 255, 0);
+}
+
+.BackToMenuButton:hover {
+    background-image: resource('Images/MenuCreate/BackTomenu');
+    -unity-background-scale-mode: scale-to-fit;
+    background-color: rgba(88, 88, 88, 0);
+    border-left-color: rgba(255, 255, 255, 0);
+    border-right-color: rgba(255, 255, 255, 0);
+    border-top-color: rgba(255, 255, 255, 0);
+    border-bottom-color: rgba(255, 255, 255, 0);
+    scale: 1.1 1.1;
+}
