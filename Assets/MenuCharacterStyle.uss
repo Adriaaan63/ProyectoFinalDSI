@@ -74,3 +74,36 @@
     border-bottom-color: rgba(255, 255, 255, 0);
     scale: 1.1 1.1;
 }
+
+.buttonCreate {
+    background-color: rgba(56, 56, 56, 0);
+    align-items: auto;
+    color: rgb(255, 255, 255);
+    border-left-width: 0;
+    border-right-width: 0;
+    border-top-width: 0;
+    border-bottom-width: 0;
+    font-size: 32px;
+    background-image: resource('Images/MenuCreate/CREATE');
+    flex-grow: 0;
+    flex-shrink: 1;
+    width: 154px;
+    justify-content: space-between;
+}
+
+.buttonCreate:hover {
+    background-color: rgba(56, 56, 56, 0);
+    align-items: auto;
+    color: rgb(255, 255, 255);
+    border-left-width: 0;
+    border-right-width: 0;
+    border-top-width: 0;
+    border-bottom-width: 0;
+    font-size: 32px;
+    background-image: resource('Images/MenuCreate/CREATE');
+    flex-grow: 0;
+    flex-shrink: 1;
+    width: 154px;
+    justify-content: space-between;
+    scale: 1.1 1.1;
+}

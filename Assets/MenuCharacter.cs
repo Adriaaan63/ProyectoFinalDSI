@@ -29,6 +29,7 @@ public class MenuCharacter : MonoBehaviour
     int auxNumSkin = 0;
     bool pulsado = false;
     int pointsAvalible = 0;
+    bool modificar = false;
 
     VisualElement returnToMenu;
 
@@ -97,8 +98,20 @@ public class MenuCharacter : MonoBehaviour
     }
     void ChangeName(ChangeEvent<string> e)
     {
+
         if(e.newValue.Length < 10)
-            nameAux = e.newValue;
+        {
+            if(!modificar)
+                nameAux = e.newValue;
+            else
+            {
+                Debug.Log(e.newValue);
+                individuoPrueba.Nombre = e.newValue;
+                nameLabel.text = individuoPrueba.Nombre;
+            }
+                
+        }
+            
     }
     void ChangeImage(ClickEvent e)
     {
@@ -143,7 +156,11 @@ public class MenuCharacter : MonoBehaviour
         }
         auxSkin = skins;
         pulsado = true;
-        aux = new StyleBackground(per);
+        if (!modificar)
+            aux = new StyleBackground(per);
+        else
+            individuoPrueba.Imagen.style.backgroundImage = new StyleBackground(per);
+        
     }
     void NuevaTarjeta(ClickEvent e)
     {
@@ -151,18 +168,28 @@ public class MenuCharacter : MonoBehaviour
         Debug.Log(plantilla);
         VisualElement tarjetaPlantilla = plantilla.Instantiate();
 
-        skinPos.Add(tarjetaPlantilla);
-        //tarjetas_borde_negro();
-        //tarjetas_borde_blanco(tarjetaPlantilla);
 
-        imagePrin = tarjetaPlantilla.Children().First();
-        nameLabel = tarjetaPlantilla.Q<Label>("Nombre");
-        nameLabel.text = nameAux;
-        imagePrin.style.backgroundImage = aux;
-        Individuo individuo = new Individuo(nameLabel.text, imagePrin);
-        //individuo.Imagen.style.backgroundImage = baseDatos.getData();
-        //Tarjeta tarjeta = new Tarjeta(tarjetaPlantilla, individuo);
-        individuoPrueba = individuo;
+        if (nameAux.Length > 1)
+        {
+            Debug.Log("entra");
+            skinPos.Add(tarjetaPlantilla);
+            //tarjetas_borde_negro();
+            //tarjetas_borde_blanco(tarjetaPlantilla);
+
+            imagePrin = tarjetaPlantilla.Children().First();
+            nameLabel = tarjetaPlantilla.Q<Label>("Nombre");
+            nameLabel.text = nameAux;
+            imagePrin.style.backgroundImage = aux;
+
+            Individuo individuo = new Individuo(nameLabel.text, imagePrin);
+            //individuo.Imagen.style.backgroundImage = baseDatos.getData();
+            //Tarjeta tarjeta = new Tarjeta(tarjetaPlantilla, individuo);
+            individuoPrueba = individuo;
+            modificar = true;
+        }
+            
+        
+        
 
         //individuos.Add(individuo);
         ////individuos.ForEach(elem =>
