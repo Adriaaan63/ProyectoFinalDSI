@@ -2,7 +2,7 @@
     <Style src="project://database/Assets/MenuButtonStyle.uss?fileID=7433441132597879392&amp;guid=adf72503ea58d6e4590c1db6c0fc03bd&amp;type=3#MenuButtonStyle" />
     <ui:VisualElement name="Menu" style="background-image: url(&apos;project://database/Assets/Resources/Images/MenuInicial/FondoMenu%201.png?fileID=2800000&amp;guid=c9fbacd0b58f3104b89557ed08c0ef01&amp;type=3#FondoMenu 1&apos;); align-items: stretch; flex-direction: column; flex-wrap: nowrap; height: auto; flex-grow: 1;">
         <ui:VisualElement name="Header" style="align-items: center; justify-content: center; flex-wrap: nowrap; flex-direction: row; height: auto; flex-grow: 2.5; flex-shrink: 1;">
-            <ui:VisualElement name="Espacio" style="flex-grow: 0.4;" />
+            <ui:VisualElement name="Espacio" style="flex-grow: 0.3;" />
             <ui:Label display-tooltip-when-elided="true" name="Title" tabindex="-1" style="font-size: 150px; -unity-font-style: bold; color: rgb(255, 255, 255); -unity-font: resource(&apos;&apos;);" />
             <ui:VisualElement name="Espacio1" style="flex-grow: 1;" />
         </ui:VisualElement>
