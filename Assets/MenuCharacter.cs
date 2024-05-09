@@ -168,8 +168,8 @@ public class MenuCharacter : MonoBehaviour
         Debug.Log(plantilla);
         VisualElement tarjetaPlantilla = plantilla.Instantiate();
 
-
-        if (nameAux.Length > 1)
+        
+        if (nameAux != null )
         {
             Debug.Log("entra");
             skinPos.Add(tarjetaPlantilla);
