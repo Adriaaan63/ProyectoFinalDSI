@@ -30,10 +30,17 @@ public class MenuCharacter : MonoBehaviour
     bool pulsado = false;
     int pointsAvalible = 0;
     bool modificar = false;
+    bool cargado = false;
 
     VisualElement returnToMenu;
 
     Individuo individuoPrueba;
+    BaseDatos baseDatos = new BaseDatos();
+    VisualElement saveButton;
+    VisualElement loadButton;
+
+    VisualTreeAsset plantilla;
+    VisualElement tarjetaPlantilla;
     private void OnEnable()
     {
         VisualElement root = GetComponent<UIDocument>().rootVisualElement;
@@ -50,6 +57,8 @@ public class MenuCharacter : MonoBehaviour
         skinPos = root.Q<VisualElement>("PosTarget");
 
         create = root.Q<Button>("ButtonCreate");
+        saveButton = root.Q<Button>("ButtonSave");
+        loadButton = root.Q<Button>("ButtonLoad");
 
         returnToMenu = root.Q<Button>("ReturnMenu");
         returnToMenu.RegisterCallback<ClickEvent>(ReturnToMenu);
@@ -63,6 +72,9 @@ public class MenuCharacter : MonoBehaviour
         skin4.RegisterCallback<ClickEvent>(ChangeImage);
 
         create.RegisterCallback<ClickEvent>(NuevaTarjeta);
+        saveButton.RegisterCallback<ClickEvent>(GuardarIcono);
+        
+        loadButton.RegisterCallback<ClickEvent>(GargarIcono);
     }
     void ChangeAttack(ChangeEvent<string> e)
     {
@@ -162,17 +174,57 @@ public class MenuCharacter : MonoBehaviour
             individuoPrueba.Imagen.style.backgroundImage = new StyleBackground(per);
         
     }
+
+    void GuardarIcono(ClickEvent evn)
+    {
+        baseDatos.saveData(AssetDatabase.GetAssetPath(individuoPrueba.Imagen.style.backgroundImage.value.sprite), individuoPrueba.Nombre);
+    }
+    void GargarIcono(ClickEvent e)
+    {
+        if (!cargado)
+        {
+            if(modificar)
+                skinPos.Remove(tarjetaPlantilla);
+            cargado = true;
+            plantilla = Resources.Load<VisualTreeAsset>("Templates/skinTarget");
+            Debug.Log(plantilla);
+            tarjetaPlantilla = plantilla.Instantiate();
+
+
+
+            Debug.Log("entra");
+            skinPos.Add(tarjetaPlantilla);
+            //tarjetas_borde_negro();
+            //tarjetas_borde_blanco(tarjetaPlantilla);
+
+            imagePrin = tarjetaPlantilla.Children().First();
+            nameLabel = tarjetaPlantilla.Q<Label>("Nombre");
+
+
+            Individuo individuo = new Individuo(nameLabel.text, imagePrin);
+            (string, StyleBackground) datos = baseDatos.getData();
+            individuo.Imagen.style.backgroundImage = datos.Item2;
+            individuo.Nombre = datos.Item1;
+            //Tarjeta tarjeta = new Tarjeta(tarjetaPlantilla, individuo);
+            individuoPrueba = individuo;
+            modificar = true;
+        }
+       
+
+    }
     void NuevaTarjeta(ClickEvent e)
     {
-        VisualTreeAsset plantilla = Resources.Load<VisualTreeAsset>("Templates/skinTarget");
+        plantilla = Resources.Load<VisualTreeAsset>("Templates/skinTarget");
         Debug.Log(plantilla);
-        VisualElement tarjetaPlantilla = plantilla.Instantiate();
-
+        tarjetaPlantilla = plantilla.Instantiate();
+       
         
         if (nameAux != null )
         {
             Debug.Log("entra");
+           
             skinPos.Add(tarjetaPlantilla);
+            
             //tarjetas_borde_negro();
             //tarjetas_borde_blanco(tarjetaPlantilla);
 

@@ -37,10 +37,10 @@
                     </ui:VisualElement>
                 </ui:VisualElement>
             </ui:VisualElement>
-            <ui:VisualElement name="Info" style="flex-grow: 1.2; flex-direction: row;">
+            <ui:VisualElement name="Info" style="flex-grow: 0.8; flex-direction: row;">
                 <ui:VisualElement name="Espacio" style="flex-grow: 0.15;" />
                 <ui:VisualElement name="ColumInfo" style="flex-grow: 1;">
-                    <ui:VisualElement name="Espacio" style="flex-grow: 1.7;" />
+                    <ui:VisualElement name="Espacio" style="flex-grow: 1.8;" />
                     <ui:VisualElement name="InfoName" style="flex-grow: 1;">
                         <ui:VisualElement name="Espacio" style="flex-grow: 0.3;" />
                         <ui:VisualElement name="Name" style="flex-grow: 0.4; background-image: resource(&apos;Images/MenuCreate/NAME&apos;); height: auto; width: 150px;" />
@@ -61,12 +61,18 @@
                         <ui:VisualElement name="Defense" style="flex-grow: 0.3; background-image: resource(&apos;Images/MenuCreate/DEFENSE&apos;); height: auto; width: 150px;" />
                         <ui:TextField picking-mode="Ignore" value="filler text" name="DefenseText" text="DEFENSE POINTS" focusable="true" multiline="false" style="align-items: flex-end; justify-content: center; margin-left: auto; margin-right: auto; margin-top: auto; margin-bottom: auto; flex-grow: 0.2; -unity-text-align: upper-left; flex-shrink: 0; flex-direction: row;" />
                     </ui:VisualElement>
-                    <ui:VisualElement name="Create" style="flex-grow: 1.5; align-items: center; justify-content: center; -unity-text-align: upper-left;">
-                        <ui:Button display-tooltip-when-elided="true" name="ButtonCreate" class="buttonCreate" />
+                    <ui:VisualElement name="Create" style="flex-grow: 0.5; align-items: center; justify-content: center; -unity-text-align: upper-left;">
+                        <ui:VisualElement name="Fila1">
+                            <ui:Button display-tooltip-when-elided="true" name="ButtonCreate" class="buttonCreate" />
+                        </ui:VisualElement>
+                        <ui:VisualElement name="FIla2" style="flex-direction: row;">
+                            <ui:Button display-tooltip-when-elided="true" name="ButtonLoad" class="buttonCreate" style="background-image: resource(&apos;Images/MenuCreate/LOAD&apos;); -unity-background-scale-mode: stretch-to-fill; flex-grow: 0;" />
+                            <ui:Button display-tooltip-when-elided="true" name="ButtonSave" class="buttonCreate" style="background-image: resource(&apos;Images/MenuCreate/SAVE&apos;); -unity-background-scale-mode: stretch-to-fill;" />
+                        </ui:VisualElement>
                     </ui:VisualElement>
                     <ui:VisualElement name="Espacio" style="flex-grow: 0.4;" />
                 </ui:VisualElement>
-                <ui:VisualElement name="Espacio" style="flex-grow: 0.25;" />
+                <ui:VisualElement name="Espacio" style="flex-grow: 0.35;" />
             </ui:VisualElement>
         </ui:VisualElement>
         <ui:VisualElement name="Footer" focusable="false" style="flex-grow: 0.2; align-items: stretch; justify-content: flex-start; flex-direction: row; position: relative;">
