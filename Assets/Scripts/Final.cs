@@ -36,7 +36,7 @@ public class Final : MonoBehaviour
     private void TextoEnriquecido(VisualElement rootve)
     {
         Label texto = rootve.Q<Label>("Title");
-        texto.text = @"<b><gradient=""Horizontal_colors"">GAME <smallcaps> TITLE</smallcaps> </gradient></b>";
+        texto.text = @"<b><gradient=""Horizontal_colors""><smallcaps>Realms' Destiny</smallcaps> </gradient></b>";
         
     }
 
