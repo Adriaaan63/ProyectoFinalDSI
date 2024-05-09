@@ -15,23 +15,23 @@ namespace Lab5c_namespace
         public (string, StyleBackground) getData()
         {
             StreamReader reader = new StreamReader(path);
-            
+            if (reader == null)
+                return (name, new StyleBackground(AssetDatabase.LoadAssetAtPath<Sprite>(data)));
             this.data = reader.ReadToEnd();
             BaseDatos jsonToBackground = JsonUtility.FromJson<BaseDatos>(this.data);
-            this.data = jsonToBackground.data;
-            this.name = jsonToBackground.name;
+            //this.data = jsonToBackground.data;
+            //this.name = jsonToBackground.name;
             reader.Close();
-            return (this.name, new StyleBackground(AssetDatabase.LoadAssetAtPath<Sprite>(this.data)));
+            return (jsonToBackground.name, new StyleBackground(AssetDatabase.LoadAssetAtPath<Sprite>(jsonToBackground.data)));
         }
         public void saveData(string data, string name)
         {
+            Debug.Log(data);
             this.data = data;
             this.name = name;
             StreamWriter writer = new StreamWriter(path);
-            string jsonImage = JsonUtility.ToJson(this.data);
-            string jsonName = JsonUtility.ToJson(this.name);
+            string jsonImage = JsonUtility.ToJson(this);
             writer.Write(jsonImage);
-            writer.Write(jsonName);
             writer.Close();
         }
     }

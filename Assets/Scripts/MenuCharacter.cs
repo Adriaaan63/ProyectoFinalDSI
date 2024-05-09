@@ -205,6 +205,7 @@ public class MenuCharacter : MonoBehaviour
             (string, StyleBackground) datos = baseDatos.getData();
             individuo.Imagen.style.backgroundImage = datos.Item2;
             individuo.Nombre = datos.Item1;
+            nameLabel.text = datos.Item1;
             //Tarjeta tarjeta = new Tarjeta(tarjetaPlantilla, individuo);
             individuoPrueba = individuo;
             modificar = true;
