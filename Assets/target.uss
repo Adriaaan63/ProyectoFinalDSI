@@ -1,0 +1,3 @@
+.tarjeta {
+    flex-grow: 1;
+}

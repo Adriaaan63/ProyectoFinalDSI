@@ -1,0 +1,7 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="False">
+    <Style src="project://database/Assets/target.uss?fileID=7433441132597879392&amp;guid=528b5dc705a223b4f8f6d14e1009238e&amp;type=3#target" />
+    <ui:VisualElement name="skintarget" class="tarjeta" style="justify-content: space-around;">
+        <ui:VisualElement name="skin" style="flex-grow: 10; background-image: none; scale: 0.85 1.05; -unity-background-scale-mode: scale-to-fit;" />
+        <ui:Label display-tooltip-when-elided="true" name="Nombre" style="align-items: center; font-size: 50px; -unity-text-align: lower-center; justify-content: space-between; white-space: nowrap;" />
+    </ui:VisualElement>
+</ui:UXML>

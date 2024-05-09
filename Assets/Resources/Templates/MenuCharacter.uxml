@@ -27,8 +27,7 @@
                 <ui:VisualElement name="Espacio" style="flex-grow: 0.4;" />
             </ui:VisualElement>
             <ui:VisualElement name="Character" style="justify-content: space-between; flex-grow: 0.3; align-items: stretch;">
-                <ui:VisualElement name="skin" style="flex-grow: 10; background-image: none; scale: 0.85 1.05;" />
-                <ui:Label display-tooltip-when-elided="true" name="Nombre" style="align-items: center; font-size: 50px; -unity-text-align: lower-center; justify-content: space-between; white-space: nowrap;" />
+                <ui:VisualElement name="PosTarget" style="flex-grow: 1; justify-content: space-around; -unity-background-scale-mode: scale-to-fit;" />
                 <ui:VisualElement name="stats" style="flex-grow: 0; flex-shrink: 0;">
                     <ui:VisualElement name="StatsAttack" style="flex-grow: 0.3;">
                         <Stats espada="0" name="Stats" style="flex-direction: row; align-items: stretch; justify-content: center;" />
@@ -63,7 +62,7 @@
                         <ui:TextField picking-mode="Ignore" value="filler text" name="DefenseText" text="DEFENSE POINTS" focusable="true" multiline="false" style="align-items: flex-end; justify-content: center; margin-left: auto; margin-right: auto; margin-top: auto; margin-bottom: auto; flex-grow: 0.2; -unity-text-align: upper-left; flex-shrink: 0; flex-direction: row;" />
                     </ui:VisualElement>
                     <ui:VisualElement name="Create" style="flex-grow: 1.5; align-items: center; justify-content: center; -unity-text-align: upper-left;">
-                        <ui:Button display-tooltip-when-elided="true" style="background-color: rgba(56, 56, 56, 0); align-items: auto; color: rgb(255, 255, 255); border-left-width: 0; border-right-width: 0; border-top-width: 0; border-bottom-width: 0; font-size: 32px; background-image: resource(&apos;Images/MenuCreate/CREATE&apos;); flex-grow: 0; flex-shrink: 1; width: 154px; justify-content: space-between;" />
+                        <ui:Button display-tooltip-when-elided="true" name="ButtonCreate" style="background-color: rgba(56, 56, 56, 0); align-items: auto; color: rgb(255, 255, 255); border-left-width: 0; border-right-width: 0; border-top-width: 0; border-bottom-width: 0; font-size: 32px; background-image: resource(&apos;Images/MenuCreate/CREATE&apos;); flex-grow: 0; flex-shrink: 1; width: 154px; justify-content: space-between;" />
                     </ui:VisualElement>
                     <ui:VisualElement name="Espacio" style="flex-grow: 0.4;" />
                 </ui:VisualElement>
